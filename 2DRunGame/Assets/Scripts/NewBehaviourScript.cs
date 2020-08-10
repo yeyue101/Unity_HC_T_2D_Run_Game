@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 
 public class NewBehaviourScript : MonoBehaviour
@@ -16,9 +17,12 @@ public class NewBehaviourScript : MonoBehaviour
     public AudioClip soundJump;
     public AudioClip soundCoin;
 
+    public Text textCoin;
+
     public Animator ani;
-    public Rigdbody2D rid;
+    public Rigdbody2D rig;
     public CapsuleCollider2D cap;
+    
     #endregion
 
 
@@ -68,6 +72,13 @@ public class NewBehaviourScript : MonoBehaviour
     private void Update()
     {
 
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collisuon.tag == "金幣") EatCoin();
     }
     #endregion
 
