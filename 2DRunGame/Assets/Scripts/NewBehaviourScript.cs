@@ -22,6 +22,8 @@ public class NewBehaviourScript : MonoBehaviour
     public Animator ani;
     public Rigdbody2D rig;
     public CapsuleCollider2D cap;
+
+
     
     #endregion
 
